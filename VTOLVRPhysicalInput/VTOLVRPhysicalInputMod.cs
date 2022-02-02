@@ -468,8 +468,10 @@ namespace VTOLVRPhysicalInput
             }
             else
             {
-                settingsFile = Path.Combine(Directory.GetCurrentDirectory(), @"VTOLVR_ModLoader\Mods\VTOLVRPhysicalInput\VTOLVRPhysicalInputSettings.xml");
+                settingsFile = Path.Combine(ModFolder, @"VTOLVRPhysicalInputSettings.xml");
             }
+            
+            Log($"Searching {settingsFile} for settings file");
 
             if (File.Exists(settingsFile))
             {
